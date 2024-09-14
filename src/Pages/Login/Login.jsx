@@ -57,29 +57,11 @@ const Login = () => {
     event.preventDefault();
     dispatch(login(loginInfo)).unwrap()
       .then(() => {
-        toast.success("Login Successfull!", {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          progress: undefined,
-          theme: "dark",
-          transition: Bounce,
-        });
+       toast.success("loggedin successfull")
         navigate("/");
       })
       .catch((error) => {
-        toast.error(error, {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          progress: undefined,
-          theme: "dark",
-          transition: Bounce,
-        });
+        toast.error("Failed to login ");
       });
   };
   return (

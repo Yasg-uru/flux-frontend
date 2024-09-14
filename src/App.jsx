@@ -47,6 +47,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            
             <Route path="/all-events" element={<AllEvents />} />
             <Route path="/faculty-corner" element={<FacultyCorner />} />
             <Route path="/convenor-corner" element={<ConvenorCorner />} />

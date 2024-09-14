@@ -58,24 +58,14 @@ const NavbarFinal = () => {
     dispatch(logout())
       .unwrap()
       .then(() => {
+        toast.success(" logout successful");
         navigate("/login");
       })
       .catch(() => {
-        // toast.error("failed to logout");
+        toast.error("failed to logout");
       });
 
-    try {
-      await localStorage.removeItem("token");
-      localStorage.removeItem("isAuthenticated");
-      setisAuthenticated(false);
-      LogoutSuccessNotify();
-      setTimeout(() => {
-        navigate("/login");
-      }, 1000);
-    } catch (error) {
-      LogoutFailNotify();
-      console.error("Failed to logout", error);
-    }
+   
   };
   // const handleLogout = async () => {
   //   try {
@@ -377,7 +367,10 @@ const NavbarFinal = () => {
                         <>
                           <div className="flex gap-4">
                             <Btn1 onClickEvent={handleLogout} text="Logout" />
-                            <Btn1 onClickEvent={handleLogout} text="Profile" />
+                            <Btn1
+                              onClickEvent={() => navigate("/profile")}
+                              text="Profile"
+                            />
                           </div>
                         </>
                       ) : (
