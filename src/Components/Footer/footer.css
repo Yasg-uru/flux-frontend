@@ -1,0 +1,28 @@
+/* -------- FOOTER CSS ---------  */
+.footer-section {
+  background: url(../src/assets/Images/Components/Footer/footer-bg.png)
+    no-repeat center center;
+  background-position: right;
+  background-size: contain;
+}
+
+.footer-links li a {
+  padding-left: 10px;
+  transition: all 0.1s ease;
+  font-weight: 500;
+}
+
+.footer-links li a:hover {
+  font-weight: 600;
+  cursor: pointer;
+  border-left: 2px solid #0A3F86;
+  padding-left: 10px;
+  transition: all 0.1s ease;
+}
+@media only screen and (max-width: 758px) {
+  .footer-section {
+    background: none;
+    background-position: right;
+    background-size: contain;
+  }
+}
