@@ -55,7 +55,7 @@ const Login = () => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    dispatch(login(loginInfo))
+    dispatch(login(loginInfo)).unwrap()
       .then(() => {
         toast.success("Login Successfull!", {
           position: "top-right",

@@ -89,7 +89,7 @@ const Signup = () => {
           </div>
           <div className="form">
             <form onSubmit={handleSignup}>
-              <div className="file-input-container">
+              {/* <div className="file-input-container">
                 <input
                   type="file"
                   name="profile"
@@ -107,7 +107,7 @@ const Signup = () => {
                     className="profile-preview"
                   />
                 )}
-              </div>
+              </div> */}
               <div>
                 <input
                   type="text"

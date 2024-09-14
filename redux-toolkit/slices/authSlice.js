@@ -16,7 +16,9 @@ export const login = createAsyncThunk(
   "auth/login",
   async (formData, { rejectWithValue }) => {
     try {
-      const response = await axiosInstance.post("/user/login", formData);
+      const response = await axiosInstance.post("/user/login", formData,{
+        withCredentials:true
+      });
       return response.data; // Adjust to return full response data
     } catch (error) {
       return rejectWithValue("Failed to login. Please try again later.");
